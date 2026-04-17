@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Salsa & Bachata Charts</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+    }
+
+    header {
+        text-align: center;
+        padding: 20px;
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        background: rgba(0,0,0,0.3);
+        backdrop-filter: blur(10px);
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .column {
+        flex: 1;
+        min-width: 300px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        backdrop-filter: blur(12px);
+    }
+
+    .column h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+        padding-bottom: 10px;
+    }
+
+    .track {
+        background: rgba(255,255,255,0.08);
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    .track:hover {
+        background: rgba(255,255,255,0.15);
+        transform: scale(1.02);
+    }
+
+    .track-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    audio {
+        width: 100%;
+        outline: none;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+
+    @media(max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<header>
+🎶 TOP 5 SALSA & TOP 5 BACHATA 🎶
+</header>
+
+<div class="container">
+
+```
+<!-- SALSA -->
+<div class="column">
+    <h2>🔥 TOP 5 SALSA</h2>
+
+    <div class="track">
+        <div class="track-title">1. Salsa Song 1</div>
+        <audio controls src="songs/salsa1.mp3"></audio>
+    </div>
+
+    <div class="track">
+        <div class="track-title">2. Salsa Song 2</div>
+        <audio controls src="songs/salsa2.mp3"></audio>
+    </div>
+
+    <div class="track">
+        <div class="track-title">3. Salsa Song 3</div>
+        <audio controls src="songs/salsa3.mp3"></audio>
+    </div>
+
+    <div class="track">
+        <div class="track-title">4. Salsa Song 4</div>
+        <audio controls src="songs/salsa4.mp3"></audio>
+    </div>
+
+    <div class="track">
+        <div class="track-title">5. Salsa Song 5</div>
+        <audio controls src="songs/salsa5.mp3"></audio>
+    </div>
+</div>
+
+<!-- BACHATA -->
+<div class="column">
+    <h2>💃 TOP 5 BACHATA</h2>
+
+    <div class="track">
+        <div class="track-title">1. Bachata Song 1</div>
+        <audio controls src="songs/bachata1.mp3"></audio>
+    </div>
+
+    <div class="track">
+        <div class="track-title">2. Bachata Song 2</div>
+        <audio controls src="songs/bachata2.mp3"></audio>
+    </div>
+
+    <div class="track">
+        <div class="track-title">3. Bachata Song 3</div>
+        <audio controls src="songs/bachata3.mp3"></audio>
+    </div>
+
+    <div class="track">
+        <div class="track-title">4. Bachata Song 4</div>
+        <audio controls src="songs/bachata4.mp3"></audio>
+    </div>
+
+    <div class="track">
+        <div class="track-title">5. Bachata Song 5</div>
+        <audio controls src="songs/bachata5.mp3"></audio>
+    </div>
+</div>
+```
+
+</div>
+
+<footer>
+© 2026 Latin Charts | GitHub Ready 🎧
+</footer>
+
+<script>
+    const players = document.querySelectorAll("audio");
+
+    players.forEach(player => {
+        player.addEventListener("play", () => {
+            players.forEach(other => {
+                if (other !== player) {
+                    other.pause();
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
